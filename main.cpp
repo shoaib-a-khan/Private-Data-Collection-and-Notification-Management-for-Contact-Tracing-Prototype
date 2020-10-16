@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdint>
 #include <stdio.h>
-#include "sodium.h"
+#include <sodium.h>
 #include <string.h>
 #include <math.h>
 
@@ -15,20 +15,16 @@ int main(void)
         std::cout << "Error!\n";
     }
 
-    // for (int i = 0; i < 100; i++)
-    // {
-    //     uint32_t r = randombytes_uniform(pow(2, 32) - 1);
-    //     std::cout << r << std::endl;
-    // }
+    for (int i = 0; i < 100; i++)
+    {
+        uint32_t r = randombytes_uniform(pow(2, 32) - 1);
+        std::cout << r << std::endl;
+    }
 
-    unsigned char t = 'A';
-    uint8_t s = t;
-    std::cout<<s<<"\t"<<sizeof(uint16_t)<<std::endl;
-    std::cout<<t<<"\t"<<sizeof(unsigned short)<<std::endl;
-    // unsigned char r[crypto_core_ed25519_BYTES];
-    // unsigned char gr[crypto_core_ed25519_BYTES];
-    // crypto_core_ed25519_scalar_random(r);
-    // crypto_scalarmult_ed25519_base_noclamp(gr, r);
+    unsigned char r[crypto_core_ed25519_BYTES];
+    unsigned char gr[crypto_core_ed25519_BYTES];
+    crypto_core_ed25519_scalar_random(r);
+    crypto_scalarmult_ed25519_base_noclamp(gr, r);
     // crypto_scalarmult_base(gr, r);
     // unsigned char client_pk[crypto_kx_PUBLICKEYBYTES], client_sk[crypto_kx_SECRETKEYBYTES];
     

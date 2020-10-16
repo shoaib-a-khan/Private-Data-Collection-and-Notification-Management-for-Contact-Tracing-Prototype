@@ -2,7 +2,7 @@
 #define USER_H
 
 #include <vector>
-#include "sodium.h"
+#include <sodium.h>
 #include <cstdint>
 
 class User

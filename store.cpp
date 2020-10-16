@@ -38,7 +38,7 @@ void Store::ComputeRiskTriple(Triple &T, unsigned int X, std::vector<unsigned ch
     T.third = Compute_AyZ(z, A_y);        //compute A_y^z
 }
 
-std::vector<unsigned char> Compute_HX(unsigned int X)
+std::vector<unsigned char> Store::Compute_HX(unsigned int X)
 {
     uint8_t hashOut[crypto_core_ed25519_BYTES];
     uint8_t hashIn[sizeof(unsigned int)];
@@ -55,7 +55,7 @@ std::vector<unsigned char> Compute_HX(unsigned int X)
 }
 
 
-std::vector<unsigned char> Compute_GZ(unsigned char z[])
+std::vector<unsigned char> Store::Compute_GZ(unsigned char z[])
 {
     unsigned char gz[crypto_core_ed25519_BYTES];
     crypto_scalarmult_ed25519_base_noclamp(gz, z); //compute g^z
@@ -63,7 +63,7 @@ std::vector<unsigned char> Compute_GZ(unsigned char z[])
     return vecGz;
 }
 
-std::vector<unsigned char> Compute_AyZ(unsigned char z[], std::vector<unsigned char> A_y)
+std::vector<unsigned char> Store::Compute_AyZ(unsigned char z[], std::vector<unsigned char> A_y)
 {
     unsigned char UserPK[crypto_core_ed25519_BYTES];
     std::copy(A_y.begin(), A_y.end(), UserPK);

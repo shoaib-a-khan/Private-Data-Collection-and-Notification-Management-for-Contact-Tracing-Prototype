@@ -1,7 +1,7 @@
 #ifndef STORE_H
 #define STORE_H
 
-#include "sodium.h"
+#include <sodium.h>
 #include <vector>
 #include <unordered_map>
 #include <cstdint>
@@ -21,7 +21,7 @@ public:
     ~Store();
     void EnrollUser(unsigned int userID, std::vector<unsigned char> userPk);
     void DeriveRiskList();
-    void Store::ComputeRiskTriple(Triple &T, unsigned int X, std::vector<unsigned char> A_y);
+    void ComputeRiskTriple(Triple &T, unsigned int X, std::vector<unsigned char> A_y);
     std::vector<unsigned char> Compute_HX(unsigned int X);
     std::vector<unsigned char> Compute_GZ(unsigned char z[]);
     std::vector<unsigned char> Compute_AyZ(unsigned char z[], std::vector<unsigned char> A_y);
