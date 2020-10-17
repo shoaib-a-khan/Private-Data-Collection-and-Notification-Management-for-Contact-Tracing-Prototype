@@ -43,7 +43,7 @@ void Store::ComputeRiskTriple(Triple &T, unsigned int X, std::vector<unsigned ch
 
     unsigned char z[crypto_core_ed25519_BYTES];
     crypto_core_ed25519_scalar_random(z); //sample random z
-    T.first = Compute_HX(X);             //compute g^{H(X)}
+    T.first = Compute_HX(X);             //compute H(X)
     T.second = Compute_GZ(z);             //compute g^z
     T.third = Compute_AyZ(z, A_y);        //compute A_y^z
 }
@@ -76,9 +76,10 @@ std::vector<unsigned char> Store::Compute_GZ(unsigned char z[])
 std::vector<unsigned char> Store::Compute_AyZ(unsigned char z[], std::vector<unsigned char> A_y)
 {
     unsigned char UserPK[crypto_core_ed25519_BYTES];
+    unsigned char Ayz[crypto_core_ed25519_BYTES];
     std::copy(A_y.begin(), A_y.end(), UserPK);          //vector to array
-    crypto_scalarmult_ed25519_base_noclamp(UserPK, z); //compute g^z
-    std::vector<unsigned char> vecAyz(UserPK, UserPK + crypto_core_ed25519_BYTES);  //array to vector
+    crypto_scalarmult_ed25519(Ayz, z, UserPK);          //compute A_y^z
+    std::vector<unsigned char> vecAyz(Ayz, Ayz + crypto_core_ed25519_BYTES);  //array to vector
     return vecAyz;
 }
 

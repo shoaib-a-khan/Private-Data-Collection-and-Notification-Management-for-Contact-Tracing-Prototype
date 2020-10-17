@@ -33,9 +33,20 @@ void Gov::DeriveRiskList(std::vector<Triple> storeList)
     for (int i = 0; i < storeList.size(); i++)
     {
         Triple T = storeList[i];
-        std::vector<std::vector<unsigned char>>::iterator itr;
-        itr = find(vectorKhi.begin(), vectorKhi.end(), T.first);
-        if (itr != vectorKhi.end())
+        bool match = 0;
+        for(int i=0; i < vectorKhi.size(); i++)
+        {
+            if(T.first == vectorKhi[i])
+            {
+                match = 1;
+                break;
+            }
+        }
+        
+        // std::vector<std::vector<unsigned char>>::iterator itr;
+        // itr = find(vectorKhi.begin(), vectorKhi.end(), T.first);
+        // if (itr != vectorKhi.end())
+        if(match)
         {
             Twople R;
             unsigned char s[crypto_core_ed25519_BYTES];
