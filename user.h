@@ -17,6 +17,7 @@ public:
     User();
     User(unsigned int userId);
     ~User();
+    unsigned int GetID();
     void GenerateEnrollmentKeys();        //generates user secret key and public key
     std::pair<unsigned int, std::vector<unsigned char>> GetUserEnrollmentInfo();    //returns <User ID, User public key>
 

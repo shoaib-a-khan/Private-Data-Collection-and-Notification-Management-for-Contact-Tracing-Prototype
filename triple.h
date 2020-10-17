@@ -12,4 +12,10 @@ struct Triple
 
 };
 
+struct Twople
+{
+    std::vector<unsigned char> first;
+    std::vector<unsigned char> second;
+};
+
 #endif

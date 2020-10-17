@@ -4,6 +4,11 @@ Store::Store()
 {
 }
 
+Store::Store(unsigned int id)
+{
+    storeId = id;
+}
+
 Store::~Store()
 {
 }
@@ -11,6 +16,11 @@ Store::~Store()
 void Store::EnrollUser(unsigned int userID, std::vector<unsigned char> userPK)
 {
     UserDB[userID] = userPK;
+}
+
+void Store::InitProximityList(std::vector<std::pair<unsigned int, std::vector<unsigned int>>> pList)
+{
+    ProximityList = pList;
 }
 
 void Store::DeriveRiskList()
@@ -66,9 +76,9 @@ std::vector<unsigned char> Store::Compute_GZ(unsigned char z[])
 std::vector<unsigned char> Store::Compute_AyZ(unsigned char z[], std::vector<unsigned char> A_y)
 {
     unsigned char UserPK[crypto_core_ed25519_BYTES];
-    std::copy(A_y.begin(), A_y.end(), UserPK);
+    std::copy(A_y.begin(), A_y.end(), UserPK);          //vector to array
     crypto_scalarmult_ed25519_base_noclamp(UserPK, z); //compute g^z
-    std::vector<unsigned char> vecAyz(UserPK, UserPK + crypto_core_ed25519_BYTES);
+    std::vector<unsigned char> vecAyz(UserPK, UserPK + crypto_core_ed25519_BYTES);  //array to vector
     return vecAyz;
 }
 

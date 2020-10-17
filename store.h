@@ -12,14 +12,17 @@ class Store
 {
 
 private:
+    unsigned int storeId;
     std::unordered_map<unsigned int, std::vector<unsigned char>> UserDB;           //Each row of DB is <UserID, 32 byte PK>
     std::vector<std::pair<unsigned int, std::vector<unsigned int>>> ProximityList; //Each element in the Proximit List is a pair <User X , List of Y's in Proximity to X>
     std::vector<Triple> List;
 
 public:
     Store();
+    Store(unsigned int id);
     ~Store();
     void EnrollUser(unsigned int userID, std::vector<unsigned char> userPk);
+    void InitProximityList(std::vector<std::pair<unsigned int, std::vector<unsigned int>>> pList);
     void DeriveRiskList();
     void ComputeRiskTriple(Triple &T, unsigned int X, std::vector<unsigned char> A_y);
     std::vector<unsigned char> Compute_HX(unsigned int X);
