@@ -22,7 +22,7 @@ void Gov::ComputeSetKhi()
         unsigned int X = knownInfected[i];
         memcpy(&hashIn, &X, sizeof(X));
         crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int));
-        crypto_core_ed25519_scalar_reduce(hashOut, hashOut); //compute H(X_i)
+        // crypto_core_ed25519_scalar_reduce(hashOut, hashOut); //compute H(X_i)
         std::vector<unsigned char> vecHx(hashOut, hashOut + crypto_core_ed25519_BYTES);
         vectorKhi.push_back(vecHx);
     }
@@ -33,7 +33,8 @@ void Gov::DeriveRiskList(std::vector<Triple> storeList)
     for (int i = 0; i < storeList.size(); i++)
     {
         Triple T = storeList[i];
-        bool match = 0;
+        bool match = 0; 
+        // std::equal(T.first.begin(), T.first.end(), vectorKhi[i].begin());
         for(int i=0; i < vectorKhi.size(); i++)
         {
             if(T.first == vectorKhi[i])
