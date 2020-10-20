@@ -1,0 +1,136 @@
+Probability of Proximity between any 2 users X & Y: 10%
+Percentage of Users Initially Infected: 5%
+
+User Count: 500
+Store's Time to Compute List L: 5.74512 s
+Gov's Time to Compute Set Khi: 8e-05 s
+Gov's Time to Derive Risk List: 0.494899 s
+Store to Gov Communication Cost: 2413920 bytes
+
+User Count: 1000
+Store's Time to Compute List L: 32.161 s
+Gov's Time to Compute Set Khi: 0.000115 s
+Gov's Time to Derive Risk List: 3.25592 s
+Store to Gov Communication Cost: 9580320 bytes
+
+User Count: 1500
+Store's Time to Compute List L: 72.8993 s
+Gov's Time to Compute Set Khi: 0.000155 s
+Gov's Time to Derive Risk List: 6.2144 s
+Store to Gov Communication Cost: 21532704 bytes
+
+User Count: 2000
+Store's Time to Compute List L: 129.776 s
+Gov's Time to Compute Set Khi: 0.000186 s
+Gov's Time to Derive Risk List: 12.2507 s
+Store to Gov Communication Cost: 38292384 bytes
+
+User Count: 2500
+Store's Time to Compute List L: 205.31 s
+Gov's Time to Compute Set Khi: 0.000245 s
+Gov's Time to Derive Risk List: 23.8257 s
+Store to Gov Communication Cost: 59899008 bytes
+
+
+Probability of Proximity between any 2 users X & Y: 20%
+Percentage of Users Initially Infected: 5%
+
+User Count: 500
+Store's Time to Compute List L: 13.9658 s
+Gov's Time to Compute Set Khi: 7.4e-05 s
+Gov's Time to Derive Risk List: 1.496 s
+Store to Gov Communication Cost: 4783968 bytes
+
+User Count: 1000
+Store's Time to Compute List L: 63.6744 s
+Gov's Time to Compute Set Khi: 0.000118 s
+Gov's Time to Derive Risk List: 7.09213 s
+Store to Gov Communication Cost: 19184832 bytes
+
+User Count: 1500
+Store's Time to Compute List L: 150.556 s
+Gov's Time to Compute Set Khi: 0.000193 s
+Gov's Time to Derive Risk List: 19.012 s
+Store to Gov Communication Cost: 43067136 bytes
+
+User Count: 2000
+Store's Time to Compute List L: 260.169 s
+Gov's Time to Compute Set Khi: 0.000325 s
+Gov's Time to Derive Risk List: 34.45 s
+Store to Gov Communication Cost: 76760160 bytes
+
+User Count: 2500
+Store's Time to Compute List L: 398.794 s
+Gov's Time to Compute Set Khi: 0.000304 s
+Gov's Time to Derive Risk List: 60.1503 s
+Store to Gov Communication Cost: 119961984 bytes
+
+
+
+
+Probability of Proximity between any 2 users X & Y: 10%
+Percentage of Users Initially Infected: 10%
+
+User Count: 500
+Store's Time to Compute List L: 5.71596 s
+Gov's Time to Compute Set Khi: 0.000122 s
+Gov's Time to Derive Risk List: 1.57972 s
+Store to Gov Communication Cost: 2390688 bytes
+
+User Count: 1000
+Store's Time to Compute List L: 31.4622 s
+Gov's Time to Compute Set Khi: 0.000131 s
+Gov's Time to Derive Risk List: 6.83307 s
+Store to Gov Communication Cost: 9596832 bytes
+
+User Count: 1500
+Store's Time to Compute List L: 73.1814 s
+Gov's Time to Compute Set Khi: 0.000354 s
+Gov's Time to Derive Risk List: 17.3251 s
+Store to Gov Communication Cost: 21544704 bytes
+
+User Count: 2000
+Store's Time to Compute List L: 131.826 s
+Gov's Time to Compute Set Khi: 0.000434 s
+Gov's Time to Derive Risk List: 33.0557 s
+Store to Gov Communication Cost: 38404896 bytes
+
+User Count: 2500
+Store's Time to Compute List L: 208.793 s
+Gov's Time to Compute Set Khi: 0.000582 s
+Gov's Time to Derive Risk List: 56.9458 s
+Store to Gov Communication Cost: 59803776 bytes
+
+
+Probability of Proximity between any 2 users X & Y: 20%
+Percentage of Users Initially Infected: 10%
+
+User Count: 500
+Store's Time to Compute List L: 13.8682 s
+Gov's Time to Compute Set Khi: 0.000115 s
+Gov's Time to Derive Risk List: 3.09368 s
+Store to Gov Communication Cost: 4803264 bytes
+
+User Count: 1000
+Store's Time to Compute List L: 62.5995 s
+Gov's Time to Compute Set Khi: 0.000213 s
+Gov's Time to Derive Risk List: 13.8272 s
+Store to Gov Communication Cost: 19182720 bytes
+
+User Count: 1500
+Store's Time to Compute List L: 142.655 s
+Gov's Time to Compute Set Khi: 0.000336 s
+Gov's Time to Derive Risk List: 33.5263 s
+Store to Gov Communication Cost: 43248288 bytes
+
+User Count: 2000
+Store's Time to Compute List L: 258.743 s
+Gov's Time to Compute Set Khi: 0.000742 s
+Gov's Time to Derive Risk List: 69.4856 s
+Store to Gov Communication Cost: 76765056 bytes
+
+User Count: 2500
+Store's Time to Compute List L: 402.892 s
+Gov's Time to Compute Set Khi: 0.000701 s
+Gov's Time to Derive Risk List: 93.8554 s
+Store to Gov Communication Cost: 119884320 bytes

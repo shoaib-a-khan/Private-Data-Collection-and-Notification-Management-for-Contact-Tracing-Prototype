@@ -54,14 +54,9 @@ std::vector<unsigned char> Store::Compute_HX(unsigned int X)
     uint8_t hashIn[sizeof(unsigned int)];
     
     memcpy(&hashIn, &X, sizeof(X));
-    crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int));
-    //crypto_core_ed25519_scalar_reduce(hashOut, hashOut);  //compute H(X)
+    crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int)); //compute H(X)
     std::vector<unsigned char> vecHx(hashOut, hashOut + crypto_core_ed25519_BYTES);
-    return vecHx;
-    // unsigned char ghx[crypto_core_ed25519_BYTES];
-    // crypto_scalarmult_ed25519_base_noclamp(ghx, hashOut); //compute g^{H(X)}
-    // std::vector<unsigned char> vecGhx(ghx, ghx + crypto_core_ed25519_BYTES);
-    // return vecGhx;
+    return vecHx; 
 }
 
 

@@ -21,8 +21,7 @@ void Gov::ComputeSetKhi()
         uint8_t hashIn[sizeof(unsigned int)];
         unsigned int X = knownInfected[i];
         memcpy(&hashIn, &X, sizeof(X));
-        crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int));
-        // crypto_core_ed25519_scalar_reduce(hashOut, hashOut); //compute H(X_i)
+        crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int)); //compute H(X_i)
         std::vector<unsigned char> vecHx(hashOut, hashOut + crypto_core_ed25519_BYTES);
         vectorKhi.push_back(vecHx);
     }
@@ -33,21 +32,16 @@ void Gov::DeriveRiskList(std::vector<Triple> storeList)
     for (int i = 0; i < storeList.size(); i++)
     {
         Triple T = storeList[i];
-        bool match = 0; 
-        // std::equal(T.first.begin(), T.first.end(), vectorKhi[i].begin());
-        for(int i=0; i < vectorKhi.size(); i++)
+        bool match = 0;
+        for (int i = 0; i < vectorKhi.size(); i++)
         {
-            if(T.first == vectorKhi[i])
+            if (T.first == vectorKhi[i])
             {
                 match = 1;
                 break;
             }
         }
-        
-        // std::vector<std::vector<unsigned char>>::iterator itr;
-        // itr = find(vectorKhi.begin(), vectorKhi.end(), T.first);
-        // if (itr != vectorKhi.end())
-        if(match)
+        if (match)
         {
             Twople R;
             unsigned char s[crypto_core_ed25519_BYTES];
@@ -63,13 +57,12 @@ std::vector<unsigned char> Gov::Compute_TS(std::vector<unsigned char> T, unsigne
 {
     unsigned char Tar[crypto_core_ed25519_BYTES];
     unsigned char Ts[crypto_core_ed25519_BYTES];
-    std::copy(T.begin(), T.end(), Tar);                                 //vector to array
-    crypto_scalarmult_ed25519(Ts, s, Tar);                               //  Ts = Tar^s
+    std::copy(T.begin(), T.end(), Tar);                                   //vector to array
+    crypto_scalarmult_ed25519(Ts, s, Tar);                                //  Ts = Tar^s
     std::vector<unsigned char> vecTs(Ts, Ts + crypto_core_ed25519_BYTES); //array to vector
     return vecTs;
 }
 
 bool Gov::UpdateBoard()
 {
-
 }
