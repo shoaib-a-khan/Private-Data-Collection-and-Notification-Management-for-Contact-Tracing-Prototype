@@ -1,4 +1,4 @@
-# Privacy-Preserving-Contact-Tracing
+# Private-Data-Collection-and-Notification-Management-for-Contact-Tracing-Prototype
 
 Pre-requisite: Linux OS with g++ compiler and libsodium (https://libsodium.gitbook.io/doc/installation) library installed.
 
