@@ -50,7 +50,7 @@ int main(void)
         for (int j = 0; j < Users.size(); j++)
         {
             uint32_t r = randombytes_uniform(pow(2, 32) - 1);
-            if (r % 5 == 0 && j != i)   //r mod 10 for 10% or r mod 5 for 20% chance of users X, Y crossing paths
+            if (r % 5 == 0 && j != i)   //use r mod 10 for 10% or r mod 5 for 20% chance of users X, Y crossing paths
                 PerUserProximityList.second.push_back(Users[j].GetID());
         }
         ProximityList.push_back(PerUserProximityList);
@@ -67,15 +67,15 @@ int main(void)
     for (int i = 0; i < Users.size(); i++)
     {
         uint32_t r = randombytes_uniform(pow(2, 32) - 1);
-        if (r % 10 == 0) //r mod 10 for 10% of user population or r mod 20 for 5% of user population.
+        if (r % 10 == 0) //use r mod 10 for 10% of user population or r mod 20 for 5% of user population.
             Infected.push_back(Users[i].GetID());
     }
     G.InitKnownInfected(Infected);
     start = std::chrono::high_resolution_clock::now();
-    G.ComputeSetKhi();
+    G.ComputeSetGamma();
     stop = std::chrono::high_resolution_clock::now();
     duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    fout << "Gov's Time to Compute Set Khi: " << duration.count() / 1000000.0 << " s" << std::endl;
+    fout << "Gov's Time to Compute Set Gamma: " << duration.count() / 1000000.0 << " s" << std::endl;
     start = std::chrono::high_resolution_clock::now();
     G.DeriveRiskList(s.GetRiskList());
     stop = std::chrono::high_resolution_clock::now();

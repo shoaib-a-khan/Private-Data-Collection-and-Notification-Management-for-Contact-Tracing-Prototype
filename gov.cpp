@@ -13,7 +13,7 @@ void Gov::InitKnownInfected(std::vector<unsigned int> infected)
     knownInfected = infected;
 }
 
-void Gov::ComputeSetKhi()
+void Gov::ComputeSetGamma()
 {
     for (int i = 0; i < knownInfected.size(); i++)
     {
@@ -23,7 +23,7 @@ void Gov::ComputeSetKhi()
         memcpy(&hashIn, &X, sizeof(X));
         crypto_hash_sha256(hashOut, hashIn, sizeof(unsigned int)); //compute H(X_i)
         std::vector<unsigned char> vecHx(hashOut, hashOut + crypto_core_ed25519_BYTES);
-        vectorKhi.push_back(vecHx);
+        vectorGamma.push_back(vecHx);
     }
 }
 
@@ -33,9 +33,9 @@ void Gov::DeriveRiskList(std::vector<Triple> storeList)
     {
         Triple T = storeList[i];
         bool match = 0;
-        for (int i = 0; i < vectorKhi.size(); i++)
+        for (int i = 0; i < vectorGamma.size(); i++)
         {
-            if (T.first == vectorKhi[i])
+            if (T.first == vectorGamma[i])
             {
                 match = 1;
                 break;
