@@ -5,7 +5,7 @@ The present artifact is a proof-of-concept implementation of our protocol in Fig
 
 ## Pre-requisites 
 - Linux OS 
-- g++ compiler 
+- g++ compiler (v7.4.0)
 - [libsodium](https://libsodium.gitbook.io/doc/installation) library.
 - (Optional) CMake v3.10.2
 
