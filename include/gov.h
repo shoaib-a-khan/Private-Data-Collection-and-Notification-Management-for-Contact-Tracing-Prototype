@@ -25,7 +25,7 @@ public:
     void ComputeSetGamma();
     void DeriveRiskList(std::vector<Triple> storeList);
     std::vector<unsigned char> Compute_TS(std::vector<unsigned char> T, unsigned char s[] );
-    bool UpdateBoard();
+    void UpdateBoard();
 
 };
 

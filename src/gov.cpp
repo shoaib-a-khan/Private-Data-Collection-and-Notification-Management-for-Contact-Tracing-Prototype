@@ -63,7 +63,7 @@ std::vector<unsigned char> Gov::Compute_TS(std::vector<unsigned char> T, unsigne
     return vecTs;
 }
 
-bool Gov::UpdateBoard()
+void Gov::UpdateBoard()
 {
     BulletinBoard = RiskList;
 }
