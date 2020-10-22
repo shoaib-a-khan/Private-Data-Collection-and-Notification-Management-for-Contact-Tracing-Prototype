@@ -34,3 +34,5 @@ The numbers reported in Table 1 and Table 2 of our paper may now be reproduced b
 
 ## Output
 Besides being printed on the console as the program runs, the experimental results are also saved in `Contact_Tracing_Results.txt` in the project directory.
+
+
