@@ -27,7 +27,7 @@ On the terminal, navigate to project directory. Enter following sequence of comm
 ```
 
 ## Execution 
-The numbers reported in Table 1 and Table 2 of our paper may now be reproduced by running the executable: 
+Numbers similar to those reported in Table 1 and Table 2 of our paper may now be reproduced by running the executable: 
 ```
 ./pptrace
 ```
