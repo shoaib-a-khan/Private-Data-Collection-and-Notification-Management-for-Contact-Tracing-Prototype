@@ -2,7 +2,6 @@
 
 ## Note
 The present artifact is a proof-of-concept implementation of our protocol in Figure 4 (Section 4.2) of the related paper. Each entity in the protocol is a class in this prototype, each phase of the protocol is translated to a public method of the participating entity (class). For instance, DeriveRiskList() is a method in both Gov and Store classes since both entities participate in DeriveRiskList phase of the protocol. The implementation of each method meticulously carries out the computations that are shown in the corresponding protocol diagram. For a complete understanding of our implementation, the reader is directed to the associated code files, which are self-documented and self-explanatory.  
-![Fig](Protocol.png) 
 
 ## Pre-requisites 
 Linux OS with g++ compiler and [libsodium](https://libsodium.gitbook.io/doc/installation) library installed.
