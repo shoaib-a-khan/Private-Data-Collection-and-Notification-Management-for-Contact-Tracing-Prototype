@@ -14,7 +14,7 @@ The present artifact is a proof-of-concept implementation of our protocol in Fig
 
 On the terminal, navigate to src directory. Enter following command line to compile: 
 ```
-g++ main.cpp user.cpp store.cpp gov.cpp setup.cpp -o pptrace.out -lsodium -w
+g++ main.cpp user.cpp store.cpp gov.cpp setup.cpp -o pptrace -lsodium -w
 ```
 - **Option 2** (Requires CMake v3.10.2)
 
@@ -29,7 +29,7 @@ On the terminal, navigate to project directory. Then enter following sequence of
 ## Execution 
 The numbers reported in Table 1 and Table 2 of our paper may now be reproduced by running the executable: 
 ```
-./pptrace.out
+./pptrace
 ```
 
 ## Output
