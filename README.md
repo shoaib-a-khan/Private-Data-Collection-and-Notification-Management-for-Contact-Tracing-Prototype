@@ -18,7 +18,7 @@ g++ main.cpp user.cpp store.cpp gov.cpp setup.cpp -o pptrace -lsodium -w
 ```
 - **Option 2** (Requires CMake v3.10.2)
 
-On the terminal, navigate to project directory. Then enter following sequence of command lines to compile:
+On the terminal, navigate to project directory. Enter following sequence of command lines to compile:
 ```
   mkdir build
   cd build
