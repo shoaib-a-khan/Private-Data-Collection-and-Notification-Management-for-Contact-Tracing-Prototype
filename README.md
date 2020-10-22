@@ -7,7 +7,7 @@ The present artifact is a proof-of-concept implementation of our protocol in Fig
 - Linux OS 
 - g++ compiler (v7.4.0)
 - [libsodium](https://libsodium.gitbook.io/doc/installation) library.
-- (Optional) CMake v3.10.2
+- CMake v3.10.2 (Optional)
 
 ## Compilation 
 - **Option 1**
