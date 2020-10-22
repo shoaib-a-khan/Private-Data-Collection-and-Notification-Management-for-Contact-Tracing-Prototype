@@ -1,5 +1,5 @@
-#include "user.h"
-#include "sodium.h"
+#include "../include/user.h"
+#include <sodium.h>
 
 User::User()
 {

@@ -1,4 +1,4 @@
-#include "gov.h"
+#include "../include/gov.h"
 
 Gov::Gov()
 {
@@ -65,4 +65,5 @@ std::vector<unsigned char> Gov::Compute_TS(std::vector<unsigned char> T, unsigne
 
 bool Gov::UpdateBoard()
 {
+    BulletinBoard = RiskList;
 }

@@ -5,9 +5,8 @@
         "type": "shell",
         "label": "g++ build active file",
         "command": "/usr/bin/g++",
-        "args": ["-g", "-lsodium", 
-            "${fileDirname}/main.cpp", 
-            "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+        "args": ["-g", "${workspaceFolder}/*.cpp", 
+            "-o", "${fileDirname}/${fileBasenameNoExtension}", "-lsodium", "-w"],
         "options": {
           "cwd": "/usr/bin"
         },
