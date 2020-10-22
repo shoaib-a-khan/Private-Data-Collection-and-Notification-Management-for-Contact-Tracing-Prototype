@@ -8,7 +8,7 @@ The present artifact is a proof-of-concept implementation of our protocol in Fig
 Linux OS with g++ compiler and [libsodium](https://libsodium.gitbook.io/doc/installation) library installed.
 
 ## Compilation 
-Command line to compile: g++ main.cpp user.cpp store.cpp gov.cpp -o app.out -lsodium
+Navigate to src directory. Enter command line to compile: g++ main.cpp user.cpp store.cpp gov.cpp setup.cpp -o app.out -lsodium -w
 
 ## Execution 
 Commmand line to run: ./app.out
