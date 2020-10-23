@@ -19,6 +19,7 @@ int main(void)
     {
         /* panic! the library couldn't be initialized, it is not safe to use */
         std::cout << "Error initializing libsodium!\n";
+        return 0;
     }
 
     std::vector<int> percentInitiallyInfected = {5, 10};                //Experimental Settings (Changing these values requires modifications in setup.cpp)   
@@ -30,7 +31,7 @@ int main(void)
     std::vector<std::pair<unsigned int, std::vector<unsigned int>>> ProximityList;
     Setup sim;
     std::ofstream fout;
-    fout.open("Contact_Tracing_Results.txt", std::ios_base::app); //runtimes and communication costs are dumped here.
+    fout.open("../Contact_Tracing_Results.txt", std::ios_base::app); //runtimes and communication costs are dumped here.
 
     for (int i = 0; i < probabilityOfContact.size(); i++)   //2 iterations
     {
